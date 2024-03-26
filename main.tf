@@ -11,7 +11,7 @@
 // limitations under the License.
 
 module "resource_names" {
-  source = "git::https://github.com/nexient-llc/tf-module-resource_name.git?ref=1.1.1"
+  source = "git::https://github.com/launchbynttdata/tf-launch-module_library-resource_name.git?ref=1.0.0"
 
   for_each = var.resource_names_map
 
@@ -26,7 +26,7 @@ module "resource_names" {
 }
 
 module "resource_group" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-resource_group.git?ref=0.2.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-resource_group.git?ref=1.0.0"
 
   name     = local.resource_group_name
   location = var.location
@@ -36,7 +36,7 @@ module "resource_group" {
 }
 
 module "network" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-virtual_network.git?ref=0.2.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-virtual_network.git?ref=1.0.0"
 
   resource_group_name                                   = module.resource_group.name
   use_for_each                                          = var.use_for_each
@@ -61,7 +61,7 @@ module "network" {
 }
 
 module "network_security_group" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-network_security_group.git?ref=0.1.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_security_group.git?ref=1.0.0"
 
   for_each = local.network_security_groups
 
@@ -77,7 +77,7 @@ module "network_security_group" {
 }
 
 module "network_security_group_subnet_asscoation" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-nsg_subnet_association.git?ref=0.1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-nsg_subnet_association.git?ref=1.0.0"
 
   for_each = local.subnet_names
 
@@ -88,7 +88,7 @@ module "network_security_group_subnet_asscoation" {
 }
 
 module "route_table" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-route_table.git?ref=0.1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route_table.git?ref=1.0.0"
 
   for_each = local.route_tables
 
@@ -103,7 +103,7 @@ module "route_table" {
 }
 
 module "route_table_rules" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-route.git?ref=0.1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route.git?ref=1.0.0"
 
   for_each = local.routes_map
 
@@ -113,7 +113,7 @@ module "route_table_rules" {
 }
 
 module "route_table_subnet_asscoation" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-routetable_subnet_association.git?ref=0.1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-routetable_subnet_association.git?ref=1.0.0"
 
   for_each = local.subnet_names
 

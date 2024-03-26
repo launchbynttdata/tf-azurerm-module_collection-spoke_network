@@ -1,11 +1,11 @@
-module github.com/nexient-llc/tf-azurerm-module_collection-spoke_network
+module github.com/launchbynttdata/tf-azurerm-module_collection-spoke_network
 
 go 1.21
 
 require (
 	github.com/gruntwork-io/terratest v0.43.12
-	github.com/nexient-llc/lcaf-component-terratest-common v1.0.3
-	github.com/nexient-llc/tf-module-skeleton v0.0.0-20240307144549-04bed9aaaf83
+	github.com/launchbynttdata/lcaf-component-terratest v1.0.3
+	github.com/launchbynttdata/lcaf-skeleton-terraform v0.0.0-20240307144549-04bed9aaaf83
 	github.com/stretchr/testify v1.8.1
 )
 

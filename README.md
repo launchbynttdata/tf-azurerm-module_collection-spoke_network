@@ -128,14 +128,14 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | git::https://github.com/nexient-llc/tf-module-resource_name.git | 1.1.1 |
-| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-resource_group.git | 0.2.1 |
-| <a name="module_network"></a> [network](#module\_network) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-virtual_network.git | 0.2.0 |
-| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-network_security_group.git | 0.1.1 |
-| <a name="module_network_security_group_subnet_asscoation"></a> [network\_security\_group\_subnet\_asscoation](#module\_network\_security\_group\_subnet\_asscoation) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-nsg_subnet_association.git | 0.1.0 |
-| <a name="module_route_table"></a> [route\_table](#module\_route\_table) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-route_table.git | 0.1.0 |
-| <a name="module_route_table_rules"></a> [route\_table\_rules](#module\_route\_table\_rules) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-route.git | 0.1.0 |
-| <a name="module_route_table_subnet_asscoation"></a> [route\_table\_subnet\_asscoation](#module\_route\_table\_subnet\_asscoation) | git::https://github.com/nexient-llc/tf-azurerm-module_primitive-routetable_subnet_association.git | 0.1.0 |
+| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | git::https://github.com/launchbynttdata/tf-launch-module_library-resource_name.git | 1.0.0 |
+| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-resource_group.git | 1.0.0 |
+| <a name="module_network"></a> [network](#module\_network) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-virtual_network.git | 1.0.0 |
+| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_security_group.git | 1.0.0 |
+| <a name="module_network_security_group_subnet_asscoation"></a> [network\_security\_group\_subnet\_asscoation](#module\_network\_security\_group\_subnet\_asscoation) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-nsg_subnet_association.git | 1.0.0 |
+| <a name="module_route_table"></a> [route\_table](#module\_route\_table) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route_table.git | 1.0.0 |
+| <a name="module_route_table_rules"></a> [route\_table\_rules](#module\_route\_table\_rules) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route.git | 1.0.0 |
+| <a name="module_route_table_subnet_asscoation"></a> [route\_table\_subnet\_asscoation](#module\_route\_table\_subnet\_asscoation) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-routetable_subnet_association.git | 1.0.0 |
 
 ## Resources
 
@@ -145,7 +145,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_resource_names_map"></a> [resource\_names\_map](#input\_resource\_names\_map) | A map of key to resource\_name that will be used by tf-module-resource\_name to generate resource names | <pre>map(object({<br>    name       = string<br>    max_length = optional(number, 60)<br>    region     = optional(string, "eastus2")<br>  }))</pre> | `{}` | no |
+| <a name="input_resource_names_map"></a> [resource\_names\_map](#input\_resource\_names\_map) | A map of key to resource\_name that will be used by tf-launch-module\_library-resource\_name to generate resource names | <pre>map(object({<br>    name       = string<br>    max_length = optional(number, 60)<br>    region     = optional(string, "eastus2")<br>  }))</pre> | `{}` | no |
 | <a name="input_instance_env"></a> [instance\_env](#input\_instance\_env) | Number that represents the instance of the environment. | `number` | `0` | no |
 | <a name="input_instance_resource"></a> [instance\_resource](#input\_instance\_resource) | Number that represents the instance of the resource. | `number` | `0` | no |
 | <a name="input_logical_product_family"></a> [logical\_product\_family](#input\_logical\_product\_family) | (Required) Name of the product family for which the resource is created.<br>    Example: org\_name, department\_name. | `string` | `"launch"` | no |
