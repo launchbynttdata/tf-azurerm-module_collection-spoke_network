@@ -3,14 +3,14 @@ locals {
   //Create standard names for resources and put them in a type expected by the modules
   resource_group_name  = module.resource_names["resource_group"].standard
   virtual_network_name = module.resource_names["spoke_vnet"].standard
-  subnet_names = {
+  subnet_names = var.subnet_map == null ? {} : {
     for key, value in var.subnet_map : key => "${module.resource_names["spoke_subnet"].standard}_${key}"
   }
   subnet_names_list = keys(local.subnet_names)
 
   //Modify the subnet map variable to include standard name for each of the resource to be created with subnet.
   //Key for this resources is the non-standard subnet name and value is subnet attributes.
-  modified_subnet_map = {
+  modified_subnet_map = var.subnet_map == null ? {} : {
     for key, value in var.subnet_map : key => merge(value, {
       name = local.subnet_names[key],
       network_security_group = merge(value.network_security_group, {

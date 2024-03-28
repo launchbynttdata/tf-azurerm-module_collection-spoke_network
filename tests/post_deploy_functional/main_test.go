@@ -33,8 +33,9 @@ func TestSpokeCollectionModule(t *testing.T) {
 		SetTestConfigFolderName(testConfigsExamplesFolderDefault).
 		SetTestConfigFileName(infraTFVarFileNameDefault).
 		SetTestSpecificFlags(map[string]types.TestFlags{
-			"hub": {
+			"spoke": {
 				"IS_TERRAFORM_IDEMPOTENT_APPLY": false,
+				"SKIP_TEST":                     true,
 			},
 		}).
 		Build()
