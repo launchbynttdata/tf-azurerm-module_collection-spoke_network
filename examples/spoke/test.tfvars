@@ -44,9 +44,21 @@ subnet_map = {
     network_security_group = {
       security_rules = [
         {
+          name                         = "DenyRdpInbound"
+          access                       = "Deny"
+          priority                     = 100
+          direction                    = "Inbound"
+          protocol                     = "Tcp"
+          description                  = "Allow RDP inbound traffic from internet"
+          source_port_range            = 3389
+          destination_port_range       = 3389
+          source_address_prefix        = "0.0.0.0/0"       // internet
+          destination_address_prefixes = ["172.16.1.0/24"] // spoke-resources subnet prefix
+        },
+        {
           name                         = "AllowRdpInbound"
           access                       = "Allow"
-          priority                     = 100
+          priority                     = 101
           direction                    = "Inbound"
           protocol                     = "Tcp"
           description                  = "Allow RDP inbound traffic"
@@ -58,7 +70,7 @@ subnet_map = {
         {
           name                         = "AllowHttpInbound"
           access                       = "Allow"
-          priority                     = 101
+          priority                     = 102
           direction                    = "Inbound"
           protocol                     = "Tcp"
           description                  = "Allow HTTP inbound traffic"
@@ -91,9 +103,21 @@ subnet_map = {
     network_security_group = {
       security_rules = [
         {
+          name                         = "DenyRdpInbound"
+          access                       = "Deny"
+          priority                     = 100
+          direction                    = "Inbound"
+          protocol                     = "Tcp"
+          description                  = "Allow RDP inbound traffic from internet"
+          source_port_range            = 3389
+          destination_port_range       = 3389
+          source_address_prefix        = "0.0.0.0/0"       // internet
+          destination_address_prefixes = ["172.16.1.0/24"] // spoke-resources subnet prefix
+        },
+        {
           name                         = "AllowRdpInbound"
           access                       = "Allow"
-          priority                     = 100
+          priority                     = 101
           direction                    = "Inbound"
           protocol                     = "Tcp"
           description                  = "Allow RDP inbound traffic"
