@@ -128,14 +128,14 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | git::https://github.com/launchbynttdata/tf-launch-module_library-resource_name.git | 1.0.0 |
-| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-resource_group.git | 1.0.0 |
-| <a name="module_network"></a> [network](#module\_network) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-virtual_network.git | 1.0.0 |
-| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_security_group.git | 1.0.0 |
-| <a name="module_network_security_group_subnet_asscoation"></a> [network\_security\_group\_subnet\_asscoation](#module\_network\_security\_group\_subnet\_asscoation) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-nsg_subnet_association.git | 1.0.0 |
-| <a name="module_route_table"></a> [route\_table](#module\_route\_table) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route_table.git | 1.0.0 |
-| <a name="module_route_table_rules"></a> [route\_table\_rules](#module\_route\_table\_rules) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-route.git | 1.0.0 |
-| <a name="module_route_table_subnet_asscoation"></a> [route\_table\_subnet\_asscoation](#module\_route\_table\_subnet\_asscoation) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-routetable_subnet_association.git | 1.0.0 |
+| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | terraform.registry.launch.nttdata.com/module_library/resource_name/launch | ~> 1.0 |
+| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm | ~> 1.0 |
+| <a name="module_network"></a> [network](#module\_network) | terraform.registry.launch.nttdata.com/module_primitive/virtual_network/azurerm | ~> 1.0 |
+| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | terraform.registry.launch.nttdata.com/module_primitive/network_security_group/azurerm | ~> 1.0 |
+| <a name="module_network_security_group_subnet_asscoation"></a> [network\_security\_group\_subnet\_asscoation](#module\_network\_security\_group\_subnet\_asscoation) | terraform.registry.launch.nttdata.com/module_primitive/nsg_subnet_association/azurerm | ~> 1.0 |
+| <a name="module_route_table"></a> [route\_table](#module\_route\_table) | terraform.registry.launch.nttdata.com/module_primitive/route_table/azurerm | ~> 1.0 |
+| <a name="module_route_table_rules"></a> [route\_table\_rules](#module\_route\_table\_rules) | terraform.registry.launch.nttdata.com/module_primitive/route/azurerm | ~> 1.0 |
+| <a name="module_route_table_subnet_asscoation"></a> [route\_table\_subnet\_asscoation](#module\_route\_table\_subnet\_asscoation) | terraform.registry.launch.nttdata.com/module_primitive/routetable_subnet_association/azurerm | ~> 1.0 |
 
 ## Resources
 
