@@ -112,7 +112,7 @@ If `make check` target is successful, developer is good to commit the code to pr
 - runs `conftests`. `conftests` make sure `policy` checks are successful.
 - runs `terratest`. This is integration test suit.
 - runs `opa` tests
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -179,4 +179,4 @@ No resources.
 | <a name="output_route_table_ids"></a> [route\_table\_ids](#output\_route\_table\_ids) | The Route Table ID. |
 | <a name="output_route_table_names"></a> [route\_table\_names](#output\_route\_table\_names) | The Route Table Name. |
 | <a name="output_route_table_rules"></a> [route\_table\_rules](#output\_route\_table\_rules) | The Route ids. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

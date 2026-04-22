@@ -86,7 +86,7 @@ module "network_security_group_subnet_asscoation" {
 
   for_each = local.subnet_names
 
-  subnet_id                 = lookup(module.network.vnet_subnets_name_id, each.key)
+  subnet_id                 = module.network.vnet_subnets_name_id[each.key]
   network_security_group_id = module.network_security_group[each.key].network_security_group_id
 
   depends_on = [module.network]
@@ -125,7 +125,7 @@ module "route_table_subnet_asscoation" {
 
   for_each = local.subnet_names
 
-  subnet_id      = lookup(module.network.vnet_subnets_name_id, each.key)
+  subnet_id      = module.network.vnet_subnets_name_id[each.key]
   route_table_id = module.route_table[each.key].id
 
 
